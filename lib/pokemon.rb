@@ -8,4 +8,12 @@ class Pokemon
     @type = type
   end
 
+  def save 
+
+  end
+
+  def self.find 
+
+  end
+
 end
