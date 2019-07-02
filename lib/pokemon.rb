@@ -3,9 +3,7 @@ class Pokemon
   attr_reader :id
 
   def initialize(keywords)
-    @id = id
-    @name = name
-    @type = type
+
   end
 
   def save
