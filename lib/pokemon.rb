@@ -10,10 +10,7 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    sql = <<-SQL
-      INSERT INTO pokemon (name, type)
-      VALUES (?,?)
-    SQL
+
     DB[SQLite3::Database.new].execute(sql, self.name, self.type)
     @id = DB[SQLite3::Database.new].execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
